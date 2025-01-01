@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dc21dcb-86df-4aaa-9af9-79789029d84a" name="Changes" comment="#2-develop-backend implements model in User and Role">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/difabelzone/backend/models/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/difabelzone/backend/repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/difabelzone/backend/services/JWTService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="6dc21dcb-86df-4aaa-9af9-79789029d84a" name="Changes" comment="#2-develop-backend implements idea">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +38,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/hendrowunga/DifabelZone.git&quot;,
-    &quot;accountId&quot;: &quot;18aa1805-af32-4b8c-a9b2-7cf19d3b3b1d&quot;
+    &quot;accountId&quot;: &quot;d3f78780-e0ad-4027-b151-4b42ad6cf135&quot;
   },
   &quot;recentNewPullRequestHead&quot;: {
     &quot;server&quot;: {
@@ -66,20 +62,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BackendApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.codeium.enabled": "true",
-    "git-widget-placeholder": "2-develop-backend",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Lenovo/OneDrive/Documents/DifabelZone/backend/pom.xml",
-    "settings.editor.selected.configurable": "configurable.group.appearance"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;&lt;unknown&gt;&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/OneDrive/Documents/DifabelZone/backend/pom.xml&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="BackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-17" />
+      <option name="ALTERNATIVE_JRE_PATH" value="23" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="difabelzone.backend.BackendApplication" />
       <module name="backend" />
@@ -140,13 +138,60 @@
       <option name="project" value="LOCAL" />
       <updated>1735574394563</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="#2-develop-backend implements model in Address">
+      <option name="closed" value="true" />
+      <created>1735656614048</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1735656614048</updated>
+    </task>
+    <task id="LOCAL-00006" summary="#2-develop-backend implements model in UserRepository">
+      <option name="closed" value="true" />
+      <created>1735656635470</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1735656635470</updated>
+    </task>
+    <task id="LOCAL-00007" summary="#2-develop-backend implements JWTService">
+      <option name="closed" value="true" />
+      <created>1735656660510</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1735656660510</updated>
+    </task>
+    <task id="LOCAL-00008" summary="#2-develop-backend implements idea">
+      <option name="closed" value="true" />
+      <created>1735656679887</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1735656679887</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="#9-configuration-develop-backend" />
     <MESSAGE value="#2-develop-backend implements model in User and Role" />
-    <option name="LAST_COMMIT_MESSAGE" value="#2-develop-backend implements model in User and Role" />
+    <MESSAGE value="#2-develop-backend implements model in Address" />
+    <MESSAGE value="#2-develop-backend implements model in UserRepository" />
+    <MESSAGE value="#2-develop-backend implements JWTService" />
+    <MESSAGE value="#2-develop-backend implements idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="#2-develop-backend implements idea" />
   </component>
 </project>
