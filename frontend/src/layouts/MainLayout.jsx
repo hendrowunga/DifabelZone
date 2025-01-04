@@ -2,17 +2,17 @@ import { Outlet } from "react-router-dom";
 import DynamicPageTitle from "../components/DynamicPageTitle";
 
 export const routes = [
-  { 
-    path: "/", 
-    name: "Home" 
+  {
+    path: "/",
+    name: "Home",
   },
-  { 
-    path: "/login", 
-    name: "Dashboard" 
+  {
+    path: "/login",
+    name: "Dashboard",
   },
-  { 
-    path: "/product", 
-    name: "Products" 
+  {
+    path: "/products",
+    name: "Products",
   },
 ];
 
