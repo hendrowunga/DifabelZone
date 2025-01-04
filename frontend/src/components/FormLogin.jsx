@@ -5,35 +5,52 @@ import { toast } from "sonner";
 const FormLogin = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({ username: "", password: "" });
-
-  const VALID_USERNAME = "david";
-  const VALID_PASSWORD = "12345";
+  const [errors, setErrors] = useState({ username: "", password: "" });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
+    setErrors({ ...errors, [name]: "" }); // Clear error saat user mulai mengetik
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (user.username === "" || user.password === "") {
-      toast.error("Username dan Password Tidak Boleh Kosong!");
+    // Validasi form kosong
+    let formErrors = {};
+    if (user.username === "") formErrors.username = "Username tidak boleh kosong.";
+    if (user.password === "") formErrors.password = "Password tidak boleh kosong.";
+
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+      toast.error("Mohon isi semua data!");
       return;
     }
 
-    if (user.username !== VALID_USERNAME || user.password !== VALID_PASSWORD) {
-      toast.error("Username harus dengan nama depan dan password harus 5 digit NPM!");
+    // Ambil data akun yang terdaftar dari localStorage
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Cari user yang cocok berdasarkan username dan password
+    const registeredUser = users.find(
+      (u) => u.name === user.username && u.password === user.password
+    );
+
+    if (!registeredUser) {
+      toast.error("Username atau password salah!");
       return;
     }
 
-    const newUser = {
-      ...user,
+    // Simpan user login ke localStorage
+    const loggedInUser = {
+      ...registeredUser,
       loginAt: new Date(),
     };
-    localStorage.setItem("user", JSON.stringify(newUser));
+    localStorage.setItem("user", JSON.stringify(loggedInUser));
+
+    // Tampilkan pesan sukses dan arahkan ke dashboard
     toast.success("Login berhasil!");
     setTimeout(() => {
+      setUser({ username: "", password: "" }); // Clear input form
       navigate("/dashboard");
     }, 1000);
   };
@@ -53,8 +70,10 @@ const FormLogin = () => {
               autoComplete="username"
               required
               className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm"
+              value={user.username}
               onChange={handleChange}
             />
+            {errors.username && <p className="text-red-500 text-sm mt-1">{errors.username}</p>}
           </div>
         </div>
 
@@ -70,8 +89,10 @@ const FormLogin = () => {
               autoComplete="current-password"
               required
               className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm"
+              value={user.password}
               onChange={handleChange}
             />
+            {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
           </div>
         </div>
 
