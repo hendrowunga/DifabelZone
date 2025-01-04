@@ -1,10 +1,13 @@
 package difabelzone.backend.services;
 
 import difabelzone.backend.models.Category;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
@@ -25,14 +28,28 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public String deleteCategory(Long categoryId) {
+    public String deleteCategories(Long categoryId) {
         Category category=categories.stream()
                 .filter(c->c.getCategoryId().equals(categoryId))
-                .findFirst().orElse(null);
-        if(category==null){
-            return "Category not found";
-        }
+                .findFirst().orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND,"Resource Not Found"));
         categories.remove(category);
         return "Category with categoryId " + categoryId + " delete successfully ";
     }
+
+    @Override
+    public Category updateCategories(Category category, Long categoryId) {
+        Optional<Category> optionalCategory=categories.stream()
+                .filter(c-> c.getCategoryId().equals(categoryId))
+                .findFirst();
+
+        if(optionalCategory.isPresent()){
+            Category exitingCategory=optionalCategory.get();
+            exitingCategory.setCategoryName(category.getCategoryName());
+            return exitingCategory;
+        }else{
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Category Not Found");
+        }
+    }
+
+
 }
