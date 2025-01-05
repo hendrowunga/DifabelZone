@@ -1,15 +1,13 @@
 package difabelzone.backend.services;
 
-import difabelzone.backend.models.Category;
-
-import java.util.List;
-
+import difabelzone.backend.payloads.CategoryDTO;
+import difabelzone.backend.payloads.CategoryResponse;
 
 public interface CategoryService {
 
-    List<Category> getAllCategories();
-    void createCategories(Category category);
-    String deleteCategories(Long categoryId);
+    CategoryResponse getAllCategories(Integer pageNumber, Integer pageSize, String sortBy, String sortOrder);
+    CategoryDTO createCategories(CategoryDTO categoryDTO);
+    CategoryDTO deleteCategories(Long categoryId);
 
-    Category updateCategories(Category category, Long categoryId);
+    CategoryDTO updateCategories(CategoryDTO categoryDTO, Long categoryId);
 }
