@@ -2,10 +2,9 @@ package difabelzone.backend.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.security.core.GrantedAuthority;
@@ -21,77 +20,60 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "_user")
-public class User implements UserDetails {
+@Table(name = "users",
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = "username"),
+                @UniqueConstraint(columnNames = "email")
+        })
+public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer userId;
+     @Id
+     @GeneratedValue(strategy = GenerationType.IDENTITY)
+     @Column(name = "user_id")
+     private Long userId;
 
-    private String firstname;
-    private String lastname;
+     @NotBlank
+     @Size(max = 20)
+     @Column(name = "username")
+     private String userName;
 
-    @Email
-    @Column(unique = true, nullable = false)
-    private String email;
+     @NotBlank
+     @Size(max = 50)
+     @Email
+     @Column(name = "email")
+     private String email;
 
-    private String password;
+     @NotBlank
+     @Size(max = 120)
+     @Column(name = "password")
+     private String password;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private LocalDateTime createdDate;
+     public User(String userName, String email, String password) {
+          this.userName = userName;
+          this.email = email;
+          this.password = password;
+     }
 
-    @LastModifiedDate
-    @Column(insertable = false)
-    private LocalDateTime lastModifiedDate;
+     @Setter
+     @Getter
+     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+             fetch = FetchType.EAGER)
+     @JoinTable(name = "user_role",
+             joinColumns = @JoinColumn(name = "user_id"),
+             inverseJoinColumns = @JoinColumn(name = "role_id"))
+     private Set<Role> roles = new HashSet<>();
 
-    @ElementCollection(fetch = FetchType.EAGER) // Fetch roles eagerly
-    @Enumerated(EnumType.STRING)
-    private Set<Role> role;
+     @Getter
+     @Setter
+     @OneToMany(mappedBy = "user", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)
+//    @JoinTable(name = "user_address",
+//                joinColumns = @JoinColumn(name = "user_id"),
+//                inverseJoinColumns = @JoinColumn(name = "address_id"))
+     private List<Address> addresses = new ArrayList<>();
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinTable(
-            name = "user_address",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "address_id")
-    )
-    private List<Address> addresses = new ArrayList<>();
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        // Convert roles to GrantedAuthority
-        return role.stream()
-                .map(r -> new SimpleGrantedAuthority(r.name()))
-                .collect(Collectors.toList());
-    }
-
-    @Override
-    public String getUsername() {
-        return email; // Using email as username
-    }
-
-    @Override
-    public String getPassword() {
-        return password;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return true; // Account is never expired
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return true; // Account is never locked
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true; // Credentials are never expired
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return true; // Account is always enabled
-    }
+     @ToString.Exclude
+     @OneToMany(mappedBy = "user",
+             cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+             orphanRemoval = true)
+     private Set<Product> products;
 }
