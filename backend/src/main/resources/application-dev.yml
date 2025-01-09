@@ -15,19 +15,33 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
   application:
-#    security:
-#      jwt:
-#        secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
-#        expiration: 86400000 # a day
-#        refresh-token:
-#          expiration: 604800000 # 7 days --> not used
-#    mailing:
-#      frontend:
-#        activation-url: http://localhost:4200/activate-account
-#    cors:
-#      origins: http://192.168.0.227:8088/,http://localhost:8088/,http://localhost:4200,http://192.168.0.227:8080
+    security:
+      jwt:
+        secret-key: mySecretKey123912738aopsgjnspkmndfsopkvajoirjg94gf2opfng2moknm
+        expiration: 3000000
+        jwtCookieName: difabelZoneEcommerce
+    #        refresh-token:
+    #          expiration: 604800000 # 7 days --> not used
+    #    mailing:
+    #      frontend:
+    #        activation-url: http://localhost:4200/activate-account
+    #    cors:
+    #      origins: http://192.168.0.227:8088/,http://localhost:8088/,http://localhost:4200,http://192.168.0.227:8080
     file:
-      uploads:
-        photos-output-path: ./app/uploads
+      images:
+        photos-output-path: images/
+    image:
+      base.url: http://localhost:8088/images
+    frontend:
+      url: http://localhost:5173/
 server:
   port: 8088
+
+logging:
+  level:
+    org.springframework: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.springframework.security: DEBUG
+    difabelzone.backend: DEBUG
+#  frontend.url=http://localhost:5173/
+#  image.base.url=http://localhost:8080/images
