@@ -311,3 +311,14 @@
       images-base-url: YOUR_IMAGES_BASE_URL  
 </code></pre>  
  
+<h3>application.yml</h3>
+<pre><code>spring:
+  profiles:
+    active: dev
+springdoc:
+  default-produces-media-type: application/json
+server:
+  servlet:
+    context-path: /api/v1/ 
+</code></pre>  
+ 
