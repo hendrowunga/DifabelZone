@@ -13,7 +13,7 @@ public class SwaggerConfig {
 
      @Bean
      public OpenAPI customOpenAPI(){
-          return new OpenAPI().info(new Info().title("E-Commerce Application")
+          return new OpenAPI().info(new Info().title("E-Commerce DifabelZone Application")
                           .description("Backend APIs for E-Commerce app")
                           .version("v1.0.0")
                           .contact(new Contact().name("Hendro Wunga").url("https://github.com/hendrowunga/DifabelZone").email("hendrowunga073@gmail.com"))
