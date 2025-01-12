@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dc21dcb-86df-4aaa-9af9-79789029d84a" name="Changes" comment="#27-featurehotfix-frontend-bugfix Swagger Picture">
-      <change afterPath="$PROJECT_DIR$/backend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6dc21dcb-86df-4aaa-9af9-79789029d84a" name="Changes" comment="README.md" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736676638008</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="README.md">
+      <option name="closed" value="true" />
+      <created>1736677485562</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1736677485562</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,6 +173,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="#27-featurehotfix-frontend-bugfix Swagger Picture" />
-    <option name="LAST_COMMIT_MESSAGE" value="#27-featurehotfix-frontend-bugfix Swagger Picture" />
+    <MESSAGE value="README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
   </component>
 </project>
