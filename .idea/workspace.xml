@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dc21dcb-86df-4aaa-9af9-79789029d84a" name="Changes" comment="#27-featurehotfix-frontend-bugfix SwaggerConfig" />
+    <list default="true" id="6dc21dcb-86df-4aaa-9af9-79789029d84a" name="Changes" comment="#main configuration">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/difabelzone/backend/BackendApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/difabelzone/backend/BackendApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/test-classes/difabelzone/backend/BackendApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,6 +75,7 @@
     &quot;com.codeium.enabled&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IntelijIdea/DifabelZone&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -78,6 +89,8 @@
   </component>
   <component name="RunManager">
     <configuration name="BackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-22" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="difabelzone.backend.BackendApplication" />
       <module name="backend" />
       <extension name="coverage">
@@ -92,8 +105,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BackendApplication" />
-        <item itemvalue="Application.BackendApplication" />
         <item itemvalue="Application.BackendApplication" />
       </list>
     </recent_temporary>
@@ -163,7 +174,55 @@
       <option name="project" value="LOCAL" />
       <updated>1736680866664</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="#main configuration target">
+      <option name="closed" value="true" />
+      <created>1736769548805</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1736769548805</updated>
+    </task>
+    <task id="LOCAL-00009" summary="#main configuration Dockerfile backend">
+      <option name="closed" value="true" />
+      <created>1736769568738</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1736769568738</updated>
+    </task>
+    <task id="LOCAL-00010" summary="#main configuration Dockerfile frontend">
+      <option name="closed" value="true" />
+      <created>1736769579321</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1736769579321</updated>
+    </task>
+    <task id="LOCAL-00011" summary="#main configuration .github/workflows pipeline-backend.yml">
+      <option name="closed" value="true" />
+      <created>1736769624343</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1736769624344</updated>
+    </task>
+    <task id="LOCAL-00012" summary="#main configuration .github/workflows pipeline-frontend.yml">
+      <option name="closed" value="true" />
+      <created>1736769641972</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1736769641972</updated>
+    </task>
+    <task id="LOCAL-00013" summary="#main configuration">
+      <option name="closed" value="true" />
+      <created>1736769650576</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1736769650576</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,6 +240,12 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="#27-featurehotfix-frontend-bugfix README.md" />
     <MESSAGE value="#27-featurehotfix-frontend-bugfix SwaggerConfig" />
-    <option name="LAST_COMMIT_MESSAGE" value="#27-featurehotfix-frontend-bugfix SwaggerConfig" />
+    <MESSAGE value="#main configuration target" />
+    <MESSAGE value="#main configuration Dockerfile backend" />
+    <MESSAGE value="#main configuration Dockerfile frontend" />
+    <MESSAGE value="#main configuration .github/workflows pipeline-backend.yml" />
+    <MESSAGE value="#main configuration .github/workflows pipeline-frontend.yml" />
+    <MESSAGE value="#main configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="#main configuration" />
   </component>
 </project>
